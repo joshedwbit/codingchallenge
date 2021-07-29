@@ -1,0 +1,35 @@
+1) a Function that spits out different words/numbers dependent on the value given (tests for multiple of 3, 5, both, or neither.)
+
+
+def lib(n):
+    for i in range(1,n+1):
+        if i%3==0 and i%5==0:
+            print('Fizzbuzz')
+        elif i%3==0 and i%5!=0:
+            print('Fizz')
+        elif i%5==0 and i%3!=0:
+            print('Buzz')
+        else:
+            print(i)
+            
+2) A function that takes 2 integer arguments, and returns a list of n smallest EVEN integers greater than or equal to start, in ascending order.
+
+
+xvec=[]
+def even(start, n):
+    for i in range(start,start+200):
+        if i%2==0:
+            xvec.append(i)
+    lis=xvec[0:n]
+    return lis
+    
+3) A function that is fed a list of numbers, and by incrementiing all but 1 number on each turn by 1, calculates the minimum number of moves required for all integers to be equal.
+
+def countMoves(numbers):
+    tot=sum(numbers)
+    long=len(numbers)
+    sma=min(numbers)
+    #print(tot, long,sma)
+    calc=tot-long*sma
+    print(calc)
+    return calc
